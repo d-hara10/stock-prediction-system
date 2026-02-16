@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Stock Prediction System",
-  description: "AI-powered volatility forecasting and sentiment analysis for stocks",
+  description: "AI-Powered Volatility Forecasting and Sentiment Analysis for Stocks",
 };
 
 export default function RootLayout({
