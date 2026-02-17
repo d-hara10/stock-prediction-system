@@ -115,7 +115,9 @@ async def predict(request: Request, ticker: str):
             "ticker",
             "n_samples=0",
             "empty",
-            "train set will be empty"
+            "train set will be empty",
+            "number of samples",
+            "number of folds"
         ]):
             logger.warning(f"Invalid ticker requested: {ticker}")
             raise HTTPException(

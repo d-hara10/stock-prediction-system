@@ -1,0 +1,50 @@
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/
+
+# Git
+.git/
+.gitignore
+
+# Environment files
+.env*
+**/.env*
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Tests (optional)
+tests/
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Frontend (backend container doesn't need it)
+frontend/
+
+# Demo video
+demo/
+*.mp4
+*.mov

@@ -1,10 +1,12 @@
 import { OpenAI } from 'openai';
 import { NextRequest, NextResponse } from 'next/server';
 
-const openai = new OpenAI({
+function getOpenAIClient() {
+  return new OpenAI({
     baseURL: "https://openrouter.ai/api/v1",
-    apiKey: process.env.OPENROUTER_API_KEY
-});
+    apiKey: process.env.OPENROUTER_API_KEY,
+  });
+}
 
 const SYSTEM_PROMPT = `You are the AI analysis engine for a stock prediction platform. Speak as "we" (the platform), not as an external observer.
 
@@ -98,6 +100,7 @@ export async function POST(req: NextRequest) {
     const data = await response.json();
 
     // Call OpenRouter LLM
+    const openai = getOpenAIClient();
     const completion = await openai.chat.completions.create({
       model: "nvidia/nemotron-3-nano-30b-a3b:free",
       messages: [

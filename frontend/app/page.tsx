@@ -116,6 +116,7 @@ export default function Home() {
               value={ticker}
               onChange={(e) => setTicker(e.target.value.toUpperCase())}
               placeholder="Enter ticker (e.g., AAPL)"
+              maxLength={10}
               className="flex-1 px-6 py-4 bg-zinc-900 border border-zinc-800 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-lg transition-all"
               disabled={loading}
             />
